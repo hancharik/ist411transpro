@@ -3,31 +3,31 @@ package orderprocessingsystem;
 
 
 public class InventoryItems {
-    private int productID;
-    private int quantity;
-    
-    public InventoryItems(int pid, int q)
+  int inventorySize = 30;
+    private Product items[] = new Product[inventorySize];
+
+    public void addProduct(inventorystore.Product item) 
     {
-        productID= pid;
-        quantity= q;
-                
-    }
+            for (int i= 0; i < inventorySize; i++) 
+            {
+                if (items[i] == null) 
+                {
+                items[i]= item;
+                return;
+                }
+            }
+    }   
     
-    public void addStock()
+    public double getTotalInventoryValue() 
     {
-        
-    }
-    
-    public void subtractStock()
-    {
-        
-    }
-    
-    public void priceAdjustment()
-    {
-        
+        double sumOfInventory = 0;
+            for (int i= 0; i < items; i++) 
+            {
+		if (items != null) 
+                {
+                    sumOfInventory += items.getItemValue();
+		}
+            }
+		return sumOfInventory;
     }
 }
-
-   
-        

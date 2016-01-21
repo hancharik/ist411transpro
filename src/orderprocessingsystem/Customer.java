@@ -16,7 +16,15 @@ public class Customer {
         this.phoneNumber= phoneNumber;
         this.address= address;      
     }
+    public int getCustomerID()
+    {
+        return CustomerID;
+    }
     
+    public void SetCustomerID(int CustomerID)
+    {
+        CustomerID= CustomerID;
+    }
     public String getName()
     {
         return name;
@@ -46,8 +54,6 @@ public class Customer {
     {
         phoneNumber= phoneNumber;
     }
-    
-   
 
 }
 
